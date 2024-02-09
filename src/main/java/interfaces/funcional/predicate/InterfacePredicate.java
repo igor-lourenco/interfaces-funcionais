@@ -140,21 +140,21 @@ public class InterfacePredicate {
 		
 		System.out.println("\n--- Usando expressao lambda inline 2 ------");
 		list.forEach(System.out::println);
+		
+//		===============================================================
+		
+		list.add(new Produto("TV", 900.00));
+		list.add(new Produto("Mouse", 20.00));
+		list.add(new Produto("Tablet", 450.00));
+		list.add(new Produto("Galaxy", 75.00));
+		list.add(new Produto("Celular", 900.00));
+		list.add(new Produto("Iphone", 20.50));
+		list.add(new Produto("Cadeira", 450.00));
+		list.add(new Produto("Mesa", 75.00));
+		
+		Double soma = MyPredicate.somaFiltrada(list, p -> p.getNome().charAt(0) == 'T' || p.getNome().charAt(0) == 'I');
+	
+		System.out.println("\nSoma: " + soma);
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
