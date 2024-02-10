@@ -2,6 +2,7 @@ package interfaces.funcional.consumer;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 import interfaces.funcional.consumer.entities.MyConsumer;
 import interfaces.funcional.consumer.entities.Produto;
@@ -59,9 +60,22 @@ public class InterfaceConsumer {
 		}
 	
 	
+//		===============================================================
+		
+		Double fator = 1.1;
+		Consumer<Produto> criteria1 = p -> p.setValor(p.getValor() * fator);
+		
+		list.forEach(criteria1);
 	
-	
-	
+		System.out.println("\n--- Usando expressão lambda declarada 1 ------");
+		list.forEach(System.out::println);
+
+		Consumer<Produto> criteria2 = p -> p.setNome(p.getNome().toUpperCase());
+		
+		list.forEach(criteria2);
+		
+		System.out.println("\n--- Usando expressão lambda declarada 2 ------");
+		list.forEach(System.out::println);
 	
 	
 	
