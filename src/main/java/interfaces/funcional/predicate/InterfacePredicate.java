@@ -154,7 +154,8 @@ public class InterfacePredicate {
 		
 		Double soma = MyPredicate.somaFiltrada(list, p -> p.getNome().charAt(0) == 'T' || p.getNome().charAt(0) == 'I');
 	
-		System.out.println("\nSoma: " + soma);
+		System.out.println("\n--- Criando função que recebe função como argumento ---");
+		System.out.println("Soma: " + soma);
 	}
 
 }
