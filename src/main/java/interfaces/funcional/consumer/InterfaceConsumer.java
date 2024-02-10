@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import interfaces.funcional.consumer.entities.MyConsumer;
-import interfaces.funcional.predicate.entities.Produto;
+import interfaces.funcional.consumer.entities.Produto;
 
 public class InterfaceConsumer {
 	
@@ -26,9 +26,26 @@ public class InterfaceConsumer {
 			System.out.println(p);
 		}
 	
+//		===============================================================
+		
+//		list.add(new Produto("TV", 900.00));
+//		list.add(new Produto("Notebook", 20.00));
+//		list.add(new Produto("Tablet", 450.00));
+//		list.add(new Produto("Galaxy", 75.00));
+		
+		list.forEach(Produto::staticPrecoUpdate);
+		
+		System.out.println("\n--- Usando Reference Method com metodo static 1 ------");
+		for (Produto p : list) {
+			System.out.println(p);
+		}
 	
-	
-	
+		list.forEach(Produto::staticNomeUpdate);
+		
+		System.out.println("\n--- Usando Reference Method com metodo static 2 ------");
+		for (Produto p : list) {
+			System.out.println(p);
+		}
 	
 	
 	
