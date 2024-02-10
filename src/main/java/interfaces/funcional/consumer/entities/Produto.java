@@ -23,5 +23,12 @@ public class Produto {
 	public static void staticNomeUpdate(Produto p) {
 		p.setNome(p.getNome().toUpperCase());
 	}
+	
+	public void nonStaticPrecoUpdate() {
+		valor = valor * 1.1;
+	}
 
+	public void nonStaticNomeUpdate() {
+		nome = nome.toLowerCase();
+	}
 }
