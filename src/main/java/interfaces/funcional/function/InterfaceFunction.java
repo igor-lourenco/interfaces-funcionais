@@ -66,6 +66,21 @@ public class InterfaceFunction {
 		
 		System.out.println("\n--- Usando expressão lambda declarada 2 ------");
 		nomes7.forEach(System.out::println);
+
+		
+		//		===============================================================
+		
+		
+		List<String> nomes8 = list.stream().map( p -> p.getNome().toUpperCase()).collect(Collectors.toList());
+		
+		System.out.println("\n--- Usando expressão lambda inline (direto o metodo) 1 ------");
+		nomes8.forEach(System.out::println);
+		
+		
+		List<Double> nomes9 = list.stream().map(p -> p.getValor() * 1.1).collect(Collectors.toList());
+		
+		System.out.println("\n--- Usando expressão lambda inline (direto o metodo) 2 ------");
+		nomes9.forEach(System.out::println);
 	
 	
 	
