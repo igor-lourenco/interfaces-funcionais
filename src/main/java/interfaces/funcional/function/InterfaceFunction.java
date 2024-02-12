@@ -37,10 +37,18 @@ public class InterfaceFunction {
 		System.out.println("--- Usando Reference Method com metodo static 2 ------");
 		nomes3.forEach(System.out::println);
 		
+//		===============================================================
+		
+		List<String> nomes4 = list.stream().map(Produto::nonStaticUppercaseNome).collect(Collectors.toList());
+
+		System.out.println("\n--- Usando Reference Method com metodo não static 1 ------");
+		nomes4.forEach(System.out::println);
 		
 		
-		
-		
+		List<Double> nomes5 = list.stream().map(Produto::nonStaticPreco).collect(Collectors.toList());
+
+		System.out.println("\n--- Usando Reference Method com metodo não static 1 ------");
+		nomes5.forEach(System.out::println);
 		
 	}
 

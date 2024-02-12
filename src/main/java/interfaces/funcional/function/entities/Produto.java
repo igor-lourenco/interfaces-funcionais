@@ -24,6 +24,14 @@ public class Produto {
 		Double x  = p.getValor() * 1.1;
 		return x;
 	}
+
+	public String nonStaticUppercaseNome() {
+		return nome.toUpperCase();
+	}
+	
+	public Double nonStaticPreco() {
+		return valor * 1.1;
+	}
 	
 	
 }
