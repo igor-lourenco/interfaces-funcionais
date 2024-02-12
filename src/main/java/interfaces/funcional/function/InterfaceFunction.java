@@ -68,7 +68,7 @@ public class InterfaceFunction {
 		nomes7.forEach(System.out::println);
 
 		
-		//		===============================================================
+//		===============================================================
 		
 		
 		List<String> nomes8 = list.stream().map( p -> p.getNome().toUpperCase()).collect(Collectors.toList());
@@ -82,9 +82,20 @@ public class InterfaceFunction {
 		System.out.println("\n--- Usando expressão lambda inline (direto o metodo) 2 ------");
 		nomes9.forEach(System.out::println);
 	
+//		===============================================================
 	
+		
+		Function<Produto, String> criteria3 = p -> p.getNome().toUpperCase();
+		List<String> nomes10 = list.stream().map( p -> MyFunction.retornaNomeModificado(p, criteria3)).collect(Collectors.toList());
 	
-	
+		System.out.println("\n--- Criando função que recebe função como argumento 1 ---");
+		nomes10.forEach(System.out::println);
+
+		Function<Produto, Double> criteria4 = p -> p.getValor() * 1.1;
+		List<Double> nomes11 = list.stream().map( p -> MyFunction.retornaTaxaPreco(p, criteria4)).collect(Collectors.toList());
+		
+		System.out.println("\n--- Criando função que recebe função como argumento 2 ---");
+		nomes11.forEach(System.out::println);
 	
 	
 	
