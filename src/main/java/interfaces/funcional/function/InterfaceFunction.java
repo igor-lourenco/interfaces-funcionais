@@ -2,6 +2,7 @@ package interfaces.funcional.function;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import interfaces.funcional.function.entities.MyFunction;
@@ -50,6 +51,30 @@ public class InterfaceFunction {
 		System.out.println("\n--- Usando Reference Method com metodo não static 1 ------");
 		nomes5.forEach(System.out::println);
 		
+//		===============================================================
+
+		Function<Produto, String> criteria1 = p -> p.getNome().toUpperCase();
+		
+		List<String> nomes6 = list.stream().map(criteria1).collect(Collectors.toList());
+	
+		System.out.println("\n--- Usando expressão lambda declarada 1 ------");
+		nomes6.forEach(System.out::println);
+
+		Function<Produto, Double> criteria2 = p -> p.getValor() * 1.1;
+		
+		List<Double> nomes7 = list.stream().map(criteria2).collect(Collectors.toList());
+		
+		System.out.println("\n--- Usando expressão lambda declarada 2 ------");
+		nomes7.forEach(System.out::println);
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	}
 
 }
