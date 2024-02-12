@@ -15,5 +15,15 @@ public class Produto {
 
 	private String nome;
 	private Double valor;
+	
+	public static String staticUppercaseNome(Produto p) {
+		return p.getNome().toUpperCase();
+	}
 
+	public static Double staticPreco(Produto p) {
+		Double x  = p.getValor() * 1.1;
+		return x;
+	}
+	
+	
 }

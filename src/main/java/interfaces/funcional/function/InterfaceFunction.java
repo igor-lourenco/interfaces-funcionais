@@ -20,14 +20,22 @@ public class InterfaceFunction {
 		list.add(new Produto("Tablet", 450.00));
 		list.add(new Produto("Galaxy", 75.00));
 		
-		List<String> nomes = list.stream().map(new MyFunction()).collect(Collectors.toList());
+		List<String> nomes1 = list.stream().map(new MyFunction()).collect(Collectors.toList());
 		
 		System.out.println("--- Usando classe que implementação da interface ------");
-		nomes.forEach(System.out::println);
+		nomes1.forEach(System.out::println);
 		
+//		===============================================================
 		
+		List<String> nomes2 = list.stream().map(Produto::staticUppercaseNome).collect(Collectors.toList());
 		
+		System.out.println("--- Usando Reference Method com metodo static 1 ------");
+		nomes2.forEach(System.out::println);
+
+		List<Double> nomes3 = list.stream().map(Produto::staticPreco).collect(Collectors.toList());
 		
+		System.out.println("--- Usando Reference Method com metodo static 2 ------");
+		nomes3.forEach(System.out::println);
 		
 		
 		
